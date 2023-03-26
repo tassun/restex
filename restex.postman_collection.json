@@ -1,0 +1,144 @@
+{
+	"info": {
+		"_postman_id": "54746369-7d01-4f23-8f2c-97acfbd1303c",
+		"name": "restex",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "6759618"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/transaction/create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"journalid\":\"1001\",\r\n    \"amount\": 100.00,\r\n    \"remark\": \"Fried Rice\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/transaction/create",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"transaction",
+						"create"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/transaction/retrieve/cffd7a17-2d29-4aef-8264-4d9c35e001ec",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/transaction/retrieve/8e50336c-bb50-4f53-a3c0-eb7cfc4f5db9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"transaction",
+						"retrieve",
+						"8e50336c-bb50-4f53-a3c0-eb7cfc4f5db9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/transaction/update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"transid\": \"8e50336c-bb50-4f53-a3c0-eb7cfc4f5db9\",\r\n    \"journalid\":\"1001\",\r\n    \"amount\": 120.00,\r\n    \"remark\": \"Fried Rice\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/transaction/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"transaction",
+						"update"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/transaction/delete?transid=8e50336c-bb50-4f53-a3c0-eb7cfc4f5db9",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/transaction/delete?transid=8e50336c-bb50-4f53-a3c0-eb7cfc4f5db9",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"transaction",
+						"delete"
+					],
+					"query": [
+						{
+							"key": "transid",
+							"value": "8e50336c-bb50-4f53-a3c0-eb7cfc4f5db9"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/transaction/find",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"transdate\":\"2023-02-01\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/transaction/find",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"transaction",
+						"find"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
